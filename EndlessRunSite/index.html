@@ -1,392 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./" type="image/x-icon">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <title>Endless Run</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body data-bs-theme="dark">
 
-  <header>
-    <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://pumpkin-run.vercel.app" >Halloween Endless Run Game</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <p>Halloween Endless Run Game</p>  
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="https://site-endless-run-game.vercel.app/">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://devdanieltomazi.vercel.app/">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/daniel-tomazi/">Contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-              </li>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <title>Endless Run</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-bs-theme="dark">
+  <header class="padding-container">
+    <nav>
+      <strong>Pumpkin Run</strong>
+      <ul>
+        <li>
+          <a class="nav-link" href="#inicio">Inicio</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#sobre">Jogo</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#sobre-nos">Pessoas</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#fale-conosco">Fale conosco</a>
+        </li>
+      </ul>
     </nav>
   </header>
-
   <main>
-      <section class="banners banner-1 d-flex flex-column justify-content-center text-center">
-        <div class="banners-titulo bg-body-secondary py-5">
-          <h2 class="fw-bold">A melhor experiência em EndlessRun Gaming.</h2>
-          <p>Jogue o nosso game e compartilhe a experiência com amigos, seu feedback é sempre bem vindo!</p>
-        </div>
-      </section>
-
-      <section class="py-5">
-        <h2 class="text-center fw-bold pb-1">Personagens
-        </h2>
-
-        <div class="container d-flex justify-content-around flex-wrap">
-
-          <div class="card m-4" style="width: 20rem;">
-            <img src="./assets/pumpkin-magica.png" class="card-img-top" alt="Pumpkin, a Abóbora Mágica">
-            <div class="card-body">
-              <h5 class="card-title py-2 fw-bold">Pumpkin, a Abóbora Mágica</h5>
-              <p class="card-text">A temida abóbora ninja, pronta para desviar de seus inimigos e alcançar 
-                seu objetivo a todo custo.</p>
-              <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas" data-bs-target="#canvas-1" aria-controls="offcanvasRight">Quero detalhes</a>
-            </div>
-          </div>
-
-          <div class="card m-4" style="width: 20rem;">
-            <img src="./assets/jack-sombrio.png" class="card-img-top" alt="Jack Sombrio, o Cowboy">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Jack Sombrio, o Cowboy</h5>
-              <p class="card-text">Perigoso, o mesmo persegue a abóbora com o objetivo de aniquilar ela por
-                 todo caos que a mesma causou.</p>
-              <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas"data-bs-target="#canvas-2" aria-controls="offcanvasRight">Quero detalhes</a>
-            </div>
-          </div>
-
-          <div class="card m-4" style="width: 20rem;">
-            <img src="./assets/vortex-fantasma.png" class="card-img-top" alt="Vortex, o Ninja Fantasma">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Vortex, o Ninja Fantasma</h5>
-              <p class="card-text">Habilidoso, o mesmo utiliza de uma tática envolvendo a destreza para
-                 interromper a jornada do herói.</p>
-              <a href="#" class="btn botao-padrao w-100 fw-bold mt-3" data-bs-toggle="offcanvas"
-              data-bs-target="#canvas-3" aria-controls="offcanvasRight">Quero detalhes</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="banners banner-2 d-flex flex-column justify-content-center">
-        <div class="banners-titulo bg-body-secondary text-center py-5">
-            <h2 class="fw-bold">Conheça mais do trabalho de quem esteve por trás do desenvolvimento:</h2>
-            <p>Aqui disponibilizarei outro jogo para experimentação: 
-               <a href="https://sliding-puzzle-pi.vercel.app/" target="_blank">Tobey Maguire Game</a>
-            </p>
-        </div>
+    <section class="hero" id="inicio">
+      <div class="content">
+        <h1 class="title">A melhor experiência em EndlessRun Gaming</h1>
+        <a href="https://pumpkin-run.vercel.app/" class="link">Jogue agora</a>
+        <div class="arrow-down"></div>
+      </div>
+      <div class="banner-wrapper">
+        <img src="assets/banner-1.png" alt="Cenário do jogo EndlessRun" title="Cenário EndlessRun" class="banner">
+      </div>
     </section>
 
-      <section class="py-5">
-
-        <h2 class="fw-bold text-center pb-1">Equipe
-        </h2>
-        
-        <div class="row mx-0">
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-2"
-                    style="width: 18rem;">
-                    <img src="./assets/foto-tomazi.png" class="card-img-top" alt="Daniel">
-                    <div class="card-body">
-                      <h3 class="card-text fw-bold text-center">Daniel Tomazi</h3>
-                      <h4 class="text-center">Desenvolvedor Full-Stack</h4>
-                      <a href="https://www.linkedin.com/in/daniel-tomazi" target="_blank">Perfil Linkedin - Daniel Tomazi</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" data-bs-toggle="modal" data-bs-target="#modal-1"
-                    style="width: 18rem;">
-                    <img src="./assets/foto-marcio.png" class="card-img-top" alt="Marcio">
-                    <div class="card-body">
-                      <h3 class="card-text fw-bold text-center">Marcio Galvão</h3>
-                      <h4 class="text-center">Ciêntista/Analista de Dados</h4>
-                      <a href="https://www.linkedin.com/in/m%C3%A1rcio-galv%C3%A3o-5a7270272" target="_blank">Perfil Linkedin - Marcio Galvão</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" style="width: 18rem;">
-                    <img src="./assets/foto-paulo.png" class="card-img-top" alt="Paulo Henrique">
-                    <div class="card-body">
-                      <h3 class="card-text fw-bold text-center">Paulo Henrique</h3>
-                      <h4 class="text-center">Analista de Infraestrutura</h4>
-                      <a href="https://www.linkedin.com/in/paulofronthenrique" target="_blank">Perfil Linkedin - Paulo Henrique</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" style="width: 18rem;">
-                    <img src="./assets/foto-vitor.png" class="card-img-top" alt="Vitor Henrique">
-                    <div class="card-body">
-                      <h3 class="card-text fw-bold text-center">Vitor Carvalho</h3>
-                      <h4 class="text-center">Analista de Infraestrutura</h4>
-                      <a href="https://www.linkedin.com/in/vitor-macedo-7884b8271/" target="_blank">Perfil Linkedin - Vitor Carvalho</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" style="width: 18rem;">
-                    <img src="./assets/foto-unilogo.png" class="card-img-top" alt="UNINOVE">
-                    <div class="card-body">
-                        <h3 class="card-text text-center fw-bold">Universidade Nove de Julho</h3>
-                        <h6 class="text-center">Daniel Tomazi - 5º semestre</h6>
-                        <h6 class="text-center">Marcio Galvão - 8º semestre</h6>
-                        <h6 class="text-center">Vitor Carvalho - 4º semestre</h6>
-                        <h6 class="text-center">Paulo Henrique - 6º semestre</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card border-0 mx-auto btn" style="width: 18rem;">
-                    <img src="./assets/foto-git.png" class="card-img-top" alt="Git">
-                    <div class="card-body">
-                        <h3 class="card-text text-center fw-bold">Estrutura e código</h3>
-                        <h6 class="text-center">Esse código HTML cria uma página web com estrutura moderna, utilizando o framework Bootstrap para responsividade e ícones.</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      </section>
-
-      <section class="banners banner-3">
-      </section>
-
-      <section class="py-4 container">
-        <div class="row">
-          <div class="col-10 col-xl-8 mx-auto">
-            <div class="border border-2 rounded p-3">
-              <h3 class="fw-bold p-3">Solicite aqui seu acesso premium!</h3>
-              <form id="contato">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingNome" placeholder="Nome">
-                  <label for="floatingNome">Nome</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                  <label for="floatingEmail">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="number" class="form-control" id="floatingTelefone" placeholder="Telefone">
-                  <label for="floatingTelefone">Telefone</label>
-                </div>
-                <select class="form-select mb-3" aria-label="Default select example">
-                  <option selected>Preferência de contato:</option>
-                  <option value="1">WhatsApp</option>
-                  <option value="2">Email</option>
-                  <option value="3">Ligação</option>
-                </select>
-                <label for="nivel-satisfacao" class="form-label">Nível de satisfação:</label>
-                <input type="range" class="form-range input-range" id="nivel-satisfacao">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
-                    Deseja receber novidades por email?
-                  </label>
-                </div>
-                <button type="button" class="btn botao-padrao w-100 fw-bold mt-3 py-3">Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <footer class="text-center">
-        <section class="container p-4 pb-0 mb-4">
-          <a class="btn" href="#!"><i class="bi bi-whatsapp"></i></a>
-          <a class="btn" href="https://www.instagram.com/danieltomaziii/"><i class="bi bi-instagram"></i></a>
-          <a class="btn" href="#!"><i class="bi bi-twitter"></i></a>
-        </section>
-        <div class="p-3">
-            Desenvolvido por Daniel Tomazi <i class="bi bi-r-circle"></i>
-        </div>
-    </footer>
-
+    <section class="about padding-container" id="sobre">
+      <h2 class="section-title">Sobre</h2>
+      <p class="text"> Em uma pequena cidade mágica, durante a época de Halloween, uma antiga lenda ganha vida
+        a cada 100 anos. Dizem que uma abóbora mágica, chamada Pumpki, é criada
+        pelo feitiço de um bruxo desaparecido. Pumpki tem uma missão muito especial:
+        ele precisa correr sem parar para evitar que a Noite Eterna cubra o mundo com escuridão.
+      </p>
+      <h2 class="section-title">Personagens</h2>
+      <ul class="characters">
+        <li class="character">
+          <img src="./assets/pumpkin-magica.png" class="card-img" alt="Pumpkin, a Abóbora Mágica" title="Pumpkin">
+          <h3 class="card-title">Pumpkin, a Abóbora Mágica</h5>
+            <p class="card-text">A temida abóbora ninja, pronta para desviar de seus inimigos e alcançar
+              seu objetivo a todo custo.</p>
+        </li>
+        <li class="character">
+          <img src="./assets/jack-sombrio.png" class="card-img" alt="Jack Sombrio, o Cowboy" title="Jack Sombrio">
+          <h3 class="card-title">Jack Sombrio, o Cowboy</h5>
+            <p class="card-text">Perigoso, o mesmo persegue a abóbora com o objetivo de aniquilar ela por
+              todo caos que a mesma causou.</p>
+        </li>
+        <li class="character">
+          <img src="./assets/vortex-fantasma.png" class="card-img" alt="Vortex, o ninja fantasma" title="Vortex">
+          <h3 class="card-title">Vortex, o Ninja Fantasma</h5>
+            <p class="card-text">Habilidoso, o mesmo utiliza de uma tática envolvendo a destreza para
+              interromper a jornada do herói.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="play">
+      <b>
+        Jogue agora e compartilhe sua experiência
+      </b>
+      <div class="banner-wrapper">
+        <img src="assets/banner-2.png" class="banner" alt="Imagem dos personagems de Pumpkin Run" title="Pumpkin Run">
+      </div>
+    </section>
+    <section class="about-us padding-container" id="sobre-nos">
+      <h3 class="section-title">Conheça a equipe por trás de Pumpkin Run</h3>
+      <p class="text">Esse projeto foi desenvolvido para fins educacionais por alunos do curso de Ciência da Computação
+        na
+        Universidade Nove De Julho.</p>
+      <ul class="students" id="students"></ul>
+    </section>
+    <section class="contact padding-container" id="fale-conosco">
+      <h3 class="section-title">Sugestão ou feedback?</h3>
+      <p class="text">Entre em contato conosco!</p>
+      <form action="" class="feedback-form">
+        <fieldset class="field">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Seu nome" />
+        </fieldset>
+        <fieldset class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Seu email" inputmode="email" />
+        </fieldset>
+        <fieldset class="field">
+          <label for="message">Mensagem</label>
+          <textarea name="message" id="message" placeholder="Digite sua mensagem"></textarea>
+        </fieldset>
+        <button class="link" type="submit" role="button">Enviar</button>
+      </form>
+    </section>
   </main>
-
-    <!-- canvas 1 -->
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-1" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Pumpkin, a Abóbora Mágica</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                História
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Em uma pequena cidade mágica, durante a época de Halloween, uma antiga lenda ganha vida 
-                a cada 100 anos. Dizem que uma abóbora mágica, chamada Pumpki, é criada 
-                pelo feitiço de um bruxo desaparecido. Pumpki tem uma missão muito especial: 
-                ele precisa correr sem parar para evitar que a Noite Eterna cubra o mundo com escuridão.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Comandos/Controles
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                O game foi pensado para ser acessivel a todos e possui comandos bem simples, você utilizará as teclas UP e Down do teclado. UP: O protagonista pulará, evitando assim ataques terrestres. Down: O personagem irá deslizar, evitando assim inimigos aéreos. 
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Suporte
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Caso precise de suporte, basta contatar qualquer membro de nossa equipe em nosso Linkedin
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- Canvas 2 -->
-
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-2" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRightLabel">Jack Sombrio, o Cowboy</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
-              data-bs-target="#accordionEventos" aria-expanded="false" aria-controls="collapseOne">
-              História
-            </button>
-          </h2>
-          <div id="accordionEventos" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Jack Sombrio agora está determinado a impedir Pumpki, a abóbora mágica, de restaurar o equilíbrio e banir 
-              a Noite Eterna. Para ele, se a escuridão dominar o mundo, ele finalmente poderá se tornar 
-              o rei das trevas e escapar de sua maldição. Por isso, Jack faz de tudo para capturar Pumpki, usando suas 
-              habilidades de pistoleiro para criar armadilhas e atirar com precisão implacável enquanto corre pelas 
-              mesmas terras sombrias que Pumpki tenta salvar.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
-              data-bs-target="#accordionCatering" aria-expanded="false" aria-controls="collapseOne">
-              Desafio
-            </button>
-          </h2>
-          <div id="accordionCatering" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Para supera-lo, basta pular sempre que o mesmo aparecer.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  </div>
-  </div>
-
-  <!-- Canvas 3 -->
-
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="canvas-3" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRightLabel">Vortex, o Ninja Fantasma do Vento</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
-              data-bs-target="#accordionEncomendas" aria-expanded="false" aria-controls="collapseOne">
-              História
-            </button>
-          </h2>
-          <div id="accordionEncomendas" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Nas sombras de um antigo clã ninja, existe uma lenda sobre um guerreiro invisível como o vento e rápido
-               como uma tempestade. Esse guerreiro é Vortex, o Ninja Fantasma do Vento, um mestre das artes ninjas que
-                controla o ar ao seu redor e utiliza suas habilidades para atacar sem ser visto. Com uma agilidade 
-                sobre-humana e técnicas secretas transmitidas por gerações, Vortex se tornou um dos ninjas mais temidos
-                da história.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed botao-padrao" type="button" data-bs-toggle="collapse"
-              data-bs-target="#accordionEntrega" aria-expanded="false" aria-controls="collapseOne">
-              Desafio
-            </button>
-          </h2>
-          <div id="accordionEntrega" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Para supera-lo, basta deslizar utilizando a tecla down, assim que ele aparecer.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-  crossorigin="anonymous"></script>
+  <script src="/index.js">
+  </script>
 </body>
-
 </html>

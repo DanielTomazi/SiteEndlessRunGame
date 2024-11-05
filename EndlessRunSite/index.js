@@ -56,7 +56,8 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 441 446"><path
 async function fetchRank() {
   try {
     const res = await fetch("https://pumpkin-api.vercel.app/ranking", {
-      method: 'GET'
+      method: "GET",
+      mode: "same-origin"
     });
 
     const ranking = await res.json();

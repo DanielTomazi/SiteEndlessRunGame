@@ -102,6 +102,29 @@
       <ol type="1" class="players" id="rank">
 
       </ol>
+      
+      <!-- Painel de Administração -->
+      <div class="admin-panel" id="admin-panel" style="display: none;">
+        <h3 class="section-title">Painel de Administração</h3>
+        <div class="admin-auth" id="admin-auth">
+          <fieldset class="field">
+            <label for="admin-password">Senha de Administrador</label>
+            <input type="password" id="admin-password" placeholder="Digite a senha" />
+          </fieldset>
+          <button class="link" id="admin-login" type="button">Entrar</button>
+        </div>
+        <div class="admin-controls" id="admin-controls" style="display: none;">
+          <p class="text">Clique no jogador que deseja remover do ranking:</p>
+          <ol type="1" class="players admin-players" id="admin-rank">
+          </ol>
+          <div class="admin-buttons">
+            <button class="link admin-restore" id="admin-restore" type="button" onclick="clearDeletedPlayers()">Restaurar Todos</button>
+            <button class="link admin-logout" id="admin-logout" type="button">Sair</button>
+          </div>
+        </div>
+      </div>
+      
+      <button class="admin-toggle" id="admin-toggle" type="button">ADM</button>
     </section>
     <section class="about-us padding-container" id="sobre-nos">
       <h2 class="section-title">Conheça a equipe por trás de Pumpkin Run</h3>
@@ -131,8 +154,7 @@
         </form>
     </section>
   </main>
-  <script src="./index.js">
-  </script>
+  <script src="./index.js"></script>
   <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
   <script type="text/javascript">

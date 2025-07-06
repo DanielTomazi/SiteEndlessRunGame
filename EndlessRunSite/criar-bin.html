@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar BIN - Pumpkin Run</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .container { max-width: 600px; margin: 0 auto; }
+        button { background: #ff6b35; color: white; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #e55a2b; }
+        .result { margin: 20px 0; padding: 15px; background: #2a2a2a; border-radius: 8px; border-left: 4px solid #ff6b35; }
+        .success { border-left-color: #10b981; }
+        .error { border-left-color: #ef4444; }
+        code { background: #333; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎃 Criar BIN para Pumpkin Run</h1>
+        <p>Clique no botão abaixo para criar automaticamente o BIN no JSONBin.io:</p>
+        
+        <button onclick="createBin()">Criar BIN Automaticamente</button>
+        
+        <div id="result"></div>
+        
+        <h2>📋 Instruções:</h2>
+        <ol>
+            <li>Clique no botão acima</li>
+            <li>Copie o BIN ID que aparecer</li>
+            <li>Cole no arquivo <code>api-config.js</code></li>
+            <li>Salve o arquivo e teste o site</li>
+        </ol>
+    </div>
+
+    <script>
+        async function createBin() {
+            const API_KEY = '$2a$10$p1tLf7MrbZNN4Dh70Mmk8uuc6Npdro5.8M7Jg.sXZO5KiJimzHfg.';
+            const resultDiv = document.getElementById('result');
+            
+            resultDiv.innerHTML = '<p>⏳ Criando BIN...</p>';
+            
+            try {
+                const initialData = {
+                    deletedPlayers: [],
+                    lastUpdated: new Date().toISOString(),
+                    version: 1
+                };
+                
+                const response = await fetch('https://api.jsonbin.io/v3/b', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Master-Key': API_KEY,
+                        'X-Bin-Name': 'pumpkin-run-deleted-players'
+                    },
+                    body: JSON.stringify(initialData)
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    const binId = result.metadata.id;
+                    
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            <h3>✅ BIN criado com sucesso!</h3>
+                            <p><strong>Seu BIN ID:</strong></p>
+                            <p><code style="font-size: 18px; background: #10b981; color: white; padding: 10px;">${binId}</code></p>
+                            <p><strong>Próximos passos:</strong></p>
+                            <ol>
+                                <li>Copie o BIN ID acima</li>
+                                <li>Abra o arquivo <code>api-config.js</code></li>
+                                <li>Substitua <code>YOUR_BIN_ID_HERE</code> pelo ID: <code>${binId}</code></li>
+                                <li>Salve o arquivo</li>
+                            </ol>
+                        </div>
+                    `;
+                } else {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h3>❌ Erro ao criar BIN</h3>
+                        <p><strong>Erro:</strong> ${error.message}</p>
+                        <p><strong>Solução:</strong> Crie manualmente no site do JSONBin.io:</p>
+                        <ol>
+                            <li>Vá para <a href="https://jsonbin.io/" target="_blank">jsonbin.io</a></li>
+                            <li>Faça login</li>
+                            <li>Clique em "Create Bin"</li>
+                            <li>Cole o JSON inicial</li>
+                            <li>Copie o ID do bin criado</li>
+                        </ol>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

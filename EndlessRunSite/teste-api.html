@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste API - Pumpkin Run</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #1a1a1a; 
+            color: white; 
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        button { 
+            background: #ff6b35; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            margin: 10px;
+        }
+        button:hover { background: #e55a2b; }
+        .result { 
+            margin: 20px 0; 
+            padding: 15px; 
+            background: #2a2a2a; 
+            border-radius: 8px; 
+            border-left: 4px solid #ff6b35; 
+        }
+        .success { border-left-color: #10b981; background: #0a3d2a; }
+        .error { border-left-color: #ef4444; background: #3d0a0a; }
+        .warning { border-left-color: #f59e0b; background: #3d2a0a; }
+        pre { 
+            background: #333; 
+            padding: 15px; 
+            border-radius: 6px; 
+            overflow-x: auto; 
+            font-size: 14px;
+        }
+        code { background: #333; padding: 2px 6px; border-radius: 4px; }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-success { background: #10b981; }
+        .status-error { background: #ef4444; }
+        .status-warning { background: #f59e0b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎃 Teste da API - Pumpkin Run</h1>
+        
+        <div class="result">
+            <h3>📊 Status da Configuração</h3>
+            <div id="config-status">⏳ Verificando...</div>
+        </div>
+        
+        <div>
+            <button onclick="testConnection()">🔍 Testar Conexão</button>
+            <button onclick="testLoadRanking()">📋 Testar Carregamento</button>
+            <button onclick="testSaveData()">💾 Testar Salvamento</button>
+            <button onclick="clearResults()">🧹 Limpar Resultados</button>
+        </div>
+        
+        <div id="results"></div>
+        
+        <div class="result">
+            <h3>📝 Como Interpretar os Resultados</h3>
+            <ul>
+                <li><span class="status-indicator status-success"></span><strong>Verde:</strong> Funcionalidade OK</li>
+                <li><span class="status-indicator status-warning"></span><strong>Amarelo:</strong> Usando fallback local</li>
+                <li><span class="status-indicator status-error"></span><strong>Vermelho:</strong> Erro que precisa ser corrigido</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./api-config.js"></script>
+    <script>
+        // Verificar status inicial
+        document.addEventListener('DOMContentLoaded', () => {
+            updateConfigStatus();
+        });
+        
+        function updateConfigStatus() {
+            const statusDiv = document.getElementById('config-status');
+            const status = window.rankingManager.getConfigStatus();
+            
+            statusDiv.innerHTML = `
+                <span class="status-indicator ${status.configured ? 'status-success' : 'status-warning'}"></span>
+                ${status.message}
+            `;
+        }
+        
+        async function testConnection() {
+            addResult('⏳ Testando conexão com JSONBin.io...', 'info');
+            
+            try {
+                const result = await window.rankingManager.testApiConnection();
+                
+                if (result.success) {
+                    addResult('✅ Conexão bem-sucedida!', 'success', JSON.stringify(result.data, null, 2));
+                } else {
+                    addResult('❌ Falha na conexão', 'error', result.error);
+                }
+            } catch (error) {
+                addResult('❌ Erro inesperado', 'error', error.message);
+            }
+        }
+        
+        async function testLoadRanking() {
+            addResult('⏳ Testando carregamento do ranking...', 'info');
+            
+            try {
+                const ranking = await window.rankingManager.getFilteredRanking();
+                addResult(`✅ Ranking carregado com ${ranking.length} jogadores`, 'success', 
+                    `Primeiros 3 jogadores:\n${JSON.stringify(ranking.slice(0, 3), null, 2)}`);
+            } catch (error) {
+                addResult('❌ Erro ao carregar ranking', 'error', error.message);
+            }
+        }
+        
+        async function testSaveData() {
+            addResult('⏳ Testando salvamento de dados...', 'info');
+            
+            try {
+                // Salvar dados de teste
+                const testData = ['test_player_123'];
+                const result = await window.rankingManager.saveDeletedPlayers(testData);
+                
+                if (result) {
+                    addResult('✅ Salvamento bem-sucedido!', 'success');
+                    
+                    // Testar carregamento dos dados salvos
+                    const loadedData = await window.rankingManager.loadDeletedPlayers();
+                    if (loadedData.includes('test_player_123')) {
+                        addResult('✅ Dados foram salvos e carregados corretamente', 'success');
+                        
+                        // Limpar dados de teste
+                        await window.rankingManager.saveDeletedPlayers([]);
+                        addResult('🧹 Dados de teste removidos', 'success');
+                    } else {
+                        addResult('⚠️ Dados salvos mas não carregados corretamente', 'warning');
+                    }
+                } else {
+                    addResult('⚠️ Salvamento usou fallback local', 'warning');
+                }
+            } catch (error) {
+                addResult('❌ Erro ao testar salvamento', 'error', error.message);
+            }
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+        }
+        
+        function addResult(message, type, details = null) {
+            const resultsDiv = document.getElementById('results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `result ${type}`;
+            
+            let content = `<h4>${message}</h4>`;
+            if (details) {
+                content += `<pre><code>${details}</code></pre>`;
+            }
+            content += `<small>⏰ ${new Date().toLocaleTimeString()}</small>`;
+            
+            resultDiv.innerHTML = content;
+            resultsDiv.appendChild(resultDiv);
+            
+            // Scroll para o resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+    </script>
+</body>
+</html>

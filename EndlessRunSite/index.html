@@ -132,12 +132,15 @@
               <button class="cta-button" id="admin-login" type="button">Entrar</button>
             </div>
             <div class="admin-controls" id="admin-controls" style="display: none;">
+              <div class="api-status" id="api-status">
+                <p class="status-message">⚠️ Verificando configuração da API...</p>
+              </div>
               <p class="text-content">Clique no jogador que deseja remover do ranking:</p>
               <div class="ranking-list">
                 <ol class="players admin-players" id="admin-rank"></ol>
               </div>
               <div class="admin-buttons">
-                <button class="admin-button admin-restore" id="admin-restore" type="button" onclick="clearDeletedPlayers()">Restaurar Todos</button>
+                <button class="admin-button admin-restore" id="admin-restore" type="button" onclick="restoreAllPlayersGlobal()">Restaurar Todos</button>
                 <button class="admin-button admin-logout" id="admin-logout" type="button">Sair</button>
               </div>
             </div>
@@ -181,6 +184,7 @@
 
   <button class="admin-toggle" id="admin-toggle" type="button">ADM</button>
 
+  <script src="./api-config.js"></script>
   <script src="./index.js"></script>
 </body>
 

@@ -11,7 +11,7 @@
 - **Responsivo para Mobile** - Otimizado para todos os dispositivos e tamanhos de tela
 - **Performance Otimizada** - Carregamento rápido com estratégias eficientes de cache
 
-## 🚀 Demo Online
+## 🚀 Jogue o Game Acesse o Site
 
 - **Website**: [https://site-endless-run-game.vercel.app/](https://site-endless-run-game.vercel.app/)
 - **Jogo**: [https://pumpkin-run.vercel.app/](https://pumpkin-run.vercel.app/)
@@ -50,14 +50,7 @@ O website é totalmente responsivo e otimizado para:
 - **Ranking ao Vivo** - Placar em tempo real dos jogadores
 - **Informações da Equipe** - Perfis dos desenvolvedores com integração LinkedIn
 
-## 🔧 Configuração e Instalação
-
-1. Clone o repositório
-2. Navegue até o diretório `EndlessRunSite`
-3. Configure as configurações da API em `api-config.js` (opcional para recursos globais)
-4. Abra `index.html` em um navegador web ou faça deploy em uma plataforma de hospedagem
-
-## 🏆 Conquista Acadêmica
+## 🏆 Projeto Acadêmico
 
 Este projeto foi desenvolvido como parte de um projeto semestral universitário, demonstrando:
 - Habilidades de desenvolvimento web full-stack

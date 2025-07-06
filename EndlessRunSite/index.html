@@ -7,163 +7,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Participe de Pumpkin Run, o emocionante jogo de navegador onde você compete para alcançar as melhores pontuações! Corra e desafie seus amigos para ver quem consegue o ranking mais alto. Divirta-se em cada corrida!" />
-  <link rel="shortcut icon" href="./" type="image/x-icon">
   <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-  <title>Endless Run</title>
+  <title>Pumpkin Run - Endless Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./estilos.css">
 </head>
 
-<body data-bs-theme="dark">
-  <header class="padding-container">
+<body>
+  <header>
     <nav>
-      <strong>Pumpkin Run</strong>
-      <ul>
-        <li>
-          <a class="nav-link" href="#inicio">Inicio</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#sobre">Jogo</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#sobre-nos">Pessoas</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#fale-conosco">Fale conosco</a>
-        </li>
+      <div class="logo">Pumpkin Run</div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="#inicio">Início</a></li>
+        <li><a class="nav-link" href="#sobre">Jogo</a></li>
+        <li><a class="nav-link" href="#sobre-nos">Equipe</a></li>
+        <li><a class="nav-link" href="#fale-conosco">Contato</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="hero" id="inicio">
-      <div class="content">
-        <h1 class="title">A melhor experiência em EndlessRun Gaming</h1>
-        <a href="https://pumpkin-run.vercel.app/" class="link">Jogue agora</a>
-        <div class="arrow-down"></div>
+      <div class="hero-background">
+        <img src="assets/banner-1.png" alt="Cenário do jogo Pumpkin Run" class="hero-image">
+        <div class="hero-overlay"></div>
       </div>
-      <div class="banner-wrapper">
-        <img src="assets/banner-1.png" alt="Cenário do jogo EndlessRun" title="Cenário EndlessRun" class="banner">
+      <div class="hero-content">
+        <h1 class="hero-title">A melhor experiência em Endless Run Gaming</h1>
+        <p class="hero-subtitle">Entre numa aventura mágica onde cada segundo conta</p>
+        <a href="https://pumpkin-run.vercel.app/" class="cta-button">
+          <span>Jogue Agora</span>
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
       </div>
     </section>
 
-    <section class="about padding-container" id="sobre">
-      <h2 class="section-title">Sobre</h2>
-      <p class="text"> Em uma pequena cidade mágica, durante a época de Halloween, uma antiga lenda ganha vida
-        a cada 100 anos. Dizem que uma abóbora mágica, é criada
-        pelo feitiço de um bruxo desaparecido. Pumpkin tem uma missão muito especial:
-        ele precisa correr sem parar para evitar que a Noite Eterna cubra o mundo com escuridão.
-      </p>
-      <h2 class="section-title">Personagens</h2>
-      <ul class="characters">
-        <li class="character">
-          <img src="./assets/pumpkin-magica.png" class="card-img" alt="Pumpkin, a Abóbora Mágica" title="Pumpkin">
-          <h3 class="card-title">Pumpkin, a Abóbora Mágica</h5>
-            <p class="card-text">A temida abóbora ninja, pronta para desviar de seus inimigos e alcançar
-              seu objetivo a todo custo.</p>
-        </li>
-        <li class="character">
-          <img src="./assets/jack-sombrio.png" class="card-img" alt="Jack Sombrio, o Cowboy" title="Jack Sombrio">
-          <h3 class="card-title">Jack Sombrio, o Cowboy</h5>
-            <p class="card-text">Perigoso, o mesmo persegue a abóbora com o objetivo de aniquilar ela por
-              todo caos que a mesma causou.</p>
-        </li>
-        <li class="character">
-          <img src="./assets/vortex-fantasma.png" class="card-img" alt="Vortex, o ninja fantasma" title="Vortex">
-          <h3 class="card-title">Vortex, o Ninja Fantasma</h5>
-            <p class="card-text">Habilidoso, o mesmo utiliza de uma tática envolvendo a destreza para
-              interromper a jornada do herói.</p>
-        </li>
-      </ul>
-    </section>
-    <section class="how-to-play padding-container">
-      <h2 class="section-title">Como jogar</h2>
-      <div class="controllers">
-        <div class="control">
-          <img src="assets/up.png" alt="tecla seta para cima" class="key" title="seta para cima">
-          <img src="assets/space.png" alt="tecla espaço" class="key space" title="espaço">
-          <p class="text">Aperte <b>seta para cima</b> ou <b>espaço</b> para pular</p>
-        </div>
-        <div class="control">
-          <img src="assets/down.png" alt="seta para baixo" class="key" title="seta para baixo">
-          <p class="text">Aperte <b>seta para baixo</b> para rastejar</p>
-        </div>
-      </div>
-    </section>
-    <section class="play">
-      <b>
-        Jogue agora e compartilhe sua experiência
-      </b>
-      <div class="banner-wrapper">
-        <img src="assets/banner-2.png" class="banner" alt="Imagem dos personagems de Pumpkin Run" title="Pumpkin Run">
-      </div>
-    </section>
-    <section class="ranking padding-container">
-      <h2 class="section-title">Ranking</h2>
-      <p class="text">Veja quem alcançou as melhores pontuações! Desafie-se e tente superá-los!</p>
-      <ol type="1" class="players" id="rank">
-
-      </ol>
-      
-      <!-- Painel de Administração -->
-      <div class="admin-panel" id="admin-panel" style="display: none;">
-        <h3 class="section-title">Painel de Administração</h3>
-        <div class="admin-auth" id="admin-auth">
-          <fieldset class="field">
-            <label for="admin-password">Senha de Administrador</label>
-            <input type="password" id="admin-password" placeholder="Digite a senha" />
-          </fieldset>
-          <button class="link" id="admin-login" type="button">Entrar</button>
-        </div>
-        <div class="admin-controls" id="admin-controls" style="display: none;">
-          <p class="text">Clique no jogador que deseja remover do ranking:</p>
-          <ol type="1" class="players admin-players" id="admin-rank">
-          </ol>
-          <div class="admin-buttons">
-            <button class="link admin-restore" id="admin-restore" type="button" onclick="clearDeletedPlayers()">Restaurar Todos</button>
-            <button class="link admin-logout" id="admin-logout" type="button">Sair</button>
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section-title">Sobre o Jogo</h2>
+        <p class="text-content">
+          Em uma pequena cidade mágica, durante a época de Halloween, uma antiga lenda ganha vida
+          a cada 100 anos. Dizem que uma abóbora mágica é criada
+          pelo feitiço de um bruxo desaparecido. Pumpkin tem uma missão muito especial:
+          ele precisa correr sem parar para evitar que a Noite Eterna cubra o mundo com escuridão.
+        </p>
+        
+        <h3 class="section-title">Personagens</h3>
+        <div class="game-characters">
+          <div class="character-card">
+            <img src="./assets/pumpkin-magica.png" class="character-image" alt="Pumpkin, a Abóbora Mágica">
+            <div class="character-info">
+              <h4 class="character-name">Pumpkin, a Abóbora Mágica</h4>
+              <p class="character-description">A temida abóbora ninja, pronta para desviar de seus inimigos e alcançar
+                seu objetivo a todo custo.</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="./assets/jack-sombrio.png" class="character-image" alt="Jack Sombrio, o Cowboy">
+            <div class="character-info">
+              <h4 class="character-name">Jack Sombrio, o Cowboy</h4>
+              <p class="character-description">Perigoso, o mesmo persegue a abóbora com o objetivo de aniquilar ela por
+                todo caos que a mesma causou.</p>
+            </div>
+          </div>
+          <div class="character-card">
+            <img src="./assets/vortex-fantasma.png" class="character-image" alt="Vortex, o ninja fantasma">
+            <div class="character-info">
+              <h4 class="character-name">Vortex, o Ninja Fantasma</h4>
+              <p class="character-description">Habilidoso, o mesmo utiliza de uma tática envolvendo a destreza para
+                interromper a jornada do herói.</p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <button class="admin-toggle" id="admin-toggle" type="button">ADM</button>
     </section>
-    <section class="about-us padding-container" id="sobre-nos">
-      <h2 class="section-title">Conheça a equipe por trás de Pumpkin Run</h3>
-        <p class="text">Esse projeto foi desenvolvido para fins educacionais por alunos do curso de Ciência da
-          Computação
-          na
-          Universidade Nove De Julho.</p>
-        <ul class="students" id="students"></ul>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Como Jogar</h2>
+        <div class="game-controls">
+          <div class="control-item">
+            <div class="control-keys">
+              <img src="assets/up.png" alt="tecla seta para cima" class="key-icon">
+              <img src="assets/space.png" alt="tecla espaço" class="key-icon space">
+            </div>
+            <p class="control-text">Aperte <strong>seta para cima</strong> ou <strong>espaço</strong> para pular</p>
+          </div>
+          <div class="control-item">
+            <div class="control-keys">
+              <img src="assets/down.png" alt="seta para baixo" class="key-icon">
+            </div>
+            <p class="control-text">Aperte <strong>seta para baixo</strong> para rastejar</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="contact padding-container" id="fale-conosco">
-      <h2 class="section-title">Sugestão ou feedback?</h3>
-        <p class="text">Entre em contato conosco!</p>
-        <form action="" class="feedback-form" id="form">
-          <fieldset class="field">
-            <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="Seu nome" />
-          </fieldset>
-          <fieldset class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Seu email" inputmode="email" />
-          </fieldset>
-          <fieldset class="field">
-            <label for="message">Mensagem</label>
-            <textarea name="message" id="message" placeholder="Digite sua mensagem"></textarea>
-          </fieldset>
-          <button class="link" type="submit" role="button">Enviar</button>
+
+    <section class="promo-section">
+      <div class="promo-background">
+        <img src="assets/banner-2.png" class="promo-image" alt="Personagens de Pumpkin Run">
+      </div>
+      <div class="promo-content">
+        Jogue agora e compartilhe sua experiência
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="ranking-section">
+          <h2 class="section-title">Ranking</h2>
+          <p class="text-content">Veja quem alcançou as melhores pontuações! Desafie-se e tente superá-los!</p>
+          <div class="ranking-list">
+            <ol class="players" id="rank"></ol>
+          </div>
+          
+          <div class="admin-panel" id="admin-panel" style="display: none;">
+            <h3 class="section-title">Painel de Administração</h3>
+            <div class="admin-auth" id="admin-auth">
+              <div class="form-group">
+                <label for="admin-password" class="form-label">Senha de Administrador</label>
+                <input type="password" id="admin-password" class="form-input" placeholder="Digite a senha" />
+              </div>
+              <button class="cta-button" id="admin-login" type="button">Entrar</button>
+            </div>
+            <div class="admin-controls" id="admin-controls" style="display: none;">
+              <p class="text-content">Clique no jogador que deseja remover do ranking:</p>
+              <div class="ranking-list">
+                <ol class="players admin-players" id="admin-rank"></ol>
+              </div>
+              <div class="admin-buttons">
+                <button class="admin-button admin-restore" id="admin-restore" type="button" onclick="clearDeletedPlayers()">Restaurar Todos</button>
+                <button class="admin-button admin-logout" id="admin-logout" type="button">Sair</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="sobre-nos">
+      <div class="container">
+        <h2 class="section-title">Conheça a Equipe</h2>
+        <p class="text-content">
+          Este projeto foi desenvolvido para fins educacionais por alunos do curso de Ciência da
+          Computação na Universidade Nove De Julho.
+        </p>
+        <div class="team-grid" id="students"></div>
+      </div>
+    </section>
+
+    <section class="section" id="fale-conosco">
+      <div class="container">
+        <h2 class="section-title">Sugestão ou Feedback?</h2>
+        <p class="text-content">Entre em contato conosco!</p>
+        <form class="contact-form" id="form">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" id="name" class="form-input" placeholder="Seu nome" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-input" placeholder="Seu email" inputmode="email" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea name="message" id="message" class="form-input form-textarea" placeholder="Digite sua mensagem"></textarea>
+          </div>
+          <button class="submit-button" type="submit">Enviar</button>
         </form>
+      </div>
     </section>
   </main>
+
+  <button class="admin-toggle" id="admin-toggle" type="button">ADM</button>
+
   <script src="./index.js"></script>
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "zplFLL7Y2o26BmVbJ",
-      });
-    })();
-  </script> -->
 </body>
 
 </html>

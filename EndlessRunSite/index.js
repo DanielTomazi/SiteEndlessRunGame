@@ -62,6 +62,8 @@ async function loadRanking() {
     });
 
     const ranking = await response.json();
+    console.log("Dados do ranking:", ranking); // Debug
+    
     const rankContainer = document.getElementById('rank');
     rankContainer.innerHTML = '';
 
@@ -71,23 +73,43 @@ async function loadRanking() {
     });
 
     filteredRanking.slice(0, 10).forEach((player, index) => {
-      const playerItem = document.createElement("li");
-
-      const playerContainer = document.createElement("div");
-      playerContainer.className = "player-item";
-
-      const name = document.createElement("span");
-      name.className = "player-name";
-      name.textContent = player.nome;
-
-      const score = document.createElement("span");
-      score.className = "player-score";
-      score.textContent = player.pontos;
-
-      playerContainer.appendChild(name);
-      playerContainer.appendChild(score);
-      playerItem.appendChild(playerContainer);
-      rankContainer.appendChild(playerItem);
+      console.log(`Player ${index + 1}:`, player.nome, player.pontos); // Debug
+      
+      // Criar o elemento li principal
+      const listItem = document.createElement("li");
+      listItem.className = "ranking-item";
+      
+      // Criar container para o conteúdo
+      const contentContainer = document.createElement("div");
+      contentContainer.className = "ranking-content";
+      contentContainer.style.cssText = "display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; gap: 4rem !important;";
+      
+      // Criar elemento para o nome
+      const nameElement = document.createElement("span");
+      nameElement.className = "ranking-name";
+      nameElement.textContent = player.nome;
+      nameElement.style.cssText = "flex: 1 !important; margin-right: auto !important; padding-right: 2rem !important;";
+      
+      // Criar espaçador visual
+      const spacer = document.createElement("span");
+      spacer.style.cssText = "flex: 1; border-bottom: 1px dotted rgba(255, 107, 53, 0.3); margin: 0 1rem; height: 1px; align-self: center;";
+      
+      // Criar elemento para a pontuação
+      const scoreElement = document.createElement("span");
+      scoreElement.className = "ranking-score";
+      scoreElement.textContent = player.pontos;
+      scoreElement.style.cssText = "min-width: 120px !important; flex-shrink: 0 !important; margin-left: auto !important; padding-left: 2rem !important; border-left: 2px solid rgba(255, 107, 53, 0.3) !important; text-align: right !important;";
+      
+      console.log("Criando elementos:", nameElement.textContent, scoreElement.textContent); // Debug
+      console.log("Name element style:", nameElement.style.cssText); // Debug
+      console.log("Score element style:", scoreElement.style.cssText); // Debug
+      
+      // Montar a estrutura
+      contentContainer.appendChild(nameElement);
+      contentContainer.appendChild(spacer);
+      contentContainer.appendChild(scoreElement);
+      listItem.appendChild(contentContainer);
+      rankContainer.appendChild(listItem);
     });
   } catch (error) {
     console.error("Erro ao carregar ranking:", error);
@@ -155,36 +177,51 @@ async function loadAdminRanking() {
     });
 
     filteredRanking.forEach((player, index) => {
-      const playerItem = document.createElement("li");
-      playerItem.style.cursor = "pointer";
-
-      const playerContainer = document.createElement("div");
-      playerContainer.className = "player-item";
-
-      const name = document.createElement("span");
-      name.className = "player-name";
-      name.textContent = player.nome;
-
-      const score = document.createElement("span");
-      score.className = "player-score";
-      score.textContent = player.pontos;
-
+      // Criar o elemento li principal
+      const listItem = document.createElement("li");
+      listItem.className = "ranking-item";
+      listItem.style.cursor = "pointer";
+      
+      // Criar container para o conteúdo
+      const contentContainer = document.createElement("div");
+      contentContainer.className = "ranking-content";
+      contentContainer.style.cssText = "display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; gap: 4rem !important;";
+      
+      // Criar elemento para o nome
+      const nameElement = document.createElement("span");
+      nameElement.className = "ranking-name";
+      nameElement.textContent = player.nome;
+      nameElement.style.cssText = "flex: 1 !important; margin-right: auto !important; padding-right: 2rem !important;";
+      
+      // Criar espaçador visual
+      const spacer = document.createElement("span");
+      spacer.style.cssText = "flex: 1; border-bottom: 1px dotted rgba(255, 107, 53, 0.3); margin: 0 1rem; height: 1px; align-self: center;";
+      
+      // Criar elemento para a pontuação
+      const scoreElement = document.createElement("span");
+      scoreElement.className = "ranking-score";
+      scoreElement.textContent = player.pontos;
+      scoreElement.style.cssText = "min-width: 120px !important; flex-shrink: 0 !important; margin-left: auto !important; padding-left: 2rem !important; border-left: 2px solid rgba(255, 107, 53, 0.3) !important; text-align: right !important;";
+      
+      // Criar botão de deletar
       const deleteBtn = document.createElement("button");
       deleteBtn.className = "delete-button";
       deleteBtn.innerHTML = "❌";
       deleteBtn.title = "Remover jogador";
-
-      playerContainer.appendChild(name);
-      playerContainer.appendChild(score);
-      playerContainer.appendChild(deleteBtn);
-      playerItem.appendChild(playerContainer);
+      
+      // Montar a estrutura
+      contentContainer.appendChild(nameElement);
+      contentContainer.appendChild(spacer);
+      contentContainer.appendChild(scoreElement);
+      contentContainer.appendChild(deleteBtn);
+      listItem.appendChild(contentContainer);
 
       deleteBtn.addEventListener('click', (event) => {
         event.stopPropagation();
         removePlayer(player.nome, player.pontos);
       });
 
-      adminRankContainer.appendChild(playerItem);
+      adminRankContainer.appendChild(listItem);
     });
   } catch (error) {
     console.error("Erro ao carregar ranking administrativo:", error);

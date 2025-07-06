@@ -65,7 +65,3 @@ Este projeto foi desenvolvido como parte de um projeto semestral universitário,
 - Integração de API e gerenciamento de dados
 - Técnicas de web design responsivo
 - Estratégias de otimização de performance
-
----
-
-*Criado com ❤️ para a experiência de jogo Pumpkin Run*

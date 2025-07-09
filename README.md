@@ -1,8 +1,8 @@
-# 🎃 Pumpkin Run - Website
+# Pumpkin Run - Website
 
 > Um website moderno e responsivo que apresenta o jogo endless runner Pumpkin Run com sistema de ranking em tempo real e controles administrativos.
 
-## 🌟 Funcionalidades
+## Funcionalidades
 
 - **Sistema de Ranking em Tempo Real** - Placar dinâmico com pontuações ao vivo dos jogadores
 - **Design UI/UX Moderno** - Interface limpa e responsiva com animações suaves
@@ -11,14 +11,14 @@
 - **Responsivo para Mobile** - Otimizado para todos os dispositivos e tamanhos de tela
 - **Performance Otimizada** - Carregamento rápido com estratégias eficientes de cache
 
-## 🚀 Jogue o Game Acesse o Site
+## Jogue o Game Acesse o Site
 
 - **Website**: [https://site-endless-run-game.vercel.app/](https://site-endless-run-game.vercel.app/)
 - **Jogo**: [https://pumpkin-run.vercel.app/](https://pumpkin-run.vercel.app/)
 
 ![Website Pumpkin Run](img-demo.png)
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Design**: CSS Grid Moderno, Flexbox, CSS Variables
@@ -26,7 +26,7 @@
 - **Armazenamento em Nuvem**: JSONBin.io para gerenciamento global de dados
 - **Deploy**: Plataforma de hospedagem Vercel
 
-## 📱 Design Responsivo
+## Design Responsivo
 
 O website é totalmente responsivo e otimizado para:
 - 📱 Dispositivos móveis (320px+)
@@ -34,7 +34,7 @@ O website é totalmente responsivo e otimizado para:
 - 💻 Computadores desktop (1200px+)
 - 🖥️ Telas grandes (1920px+)
 
-## ⚡ Performance
+## Performance
 
 - ✅ Tempos de carregamento otimizados
 - ✅ Sistema de cache eficiente
@@ -42,7 +42,7 @@ O website é totalmente responsivo e otimizado para:
 - ✅ Estrutura amigável para SEO
 - ✅ Compatível com acessibilidade
 
-## 🎯 Seções Principais
+## Seções Principais
 
 - **Seção Hero** - Introdução envolvente com call-to-action
 - **Personagens do Jogo** - Showcase interativo dos personagens
@@ -50,7 +50,7 @@ O website é totalmente responsivo e otimizado para:
 - **Ranking ao Vivo** - Placar em tempo real dos jogadores
 - **Informações da Equipe** - Perfis dos desenvolvedores com integração LinkedIn
 
-## 🏆 Projeto Acadêmico
+## Projeto Acadêmico
 
 Este projeto foi desenvolvido como parte de um projeto semestral universitário, demonstrando:
 - Habilidades de desenvolvimento web full-stack
